@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer, CircleMarker, Tooltip } from 'react-leaflet';
-import provinciasCoords from '../../Data/provinciasCoords.js';
+import provinciasCoords from '../../data/provinciasCoords.js';
 import 'leaflet/dist/leaflet.css';
 
 function MapChart({ puntos }) {
