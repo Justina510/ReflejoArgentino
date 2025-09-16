@@ -1,0 +1,16 @@
+
+.LineaSMVM-container {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'TT Fors', sans-serif;
+  color: var(--Letras, #393636);
+  margin-left: -10px;
+}
+
+.LineaSMVM-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--Letras, #393636);
+}
+

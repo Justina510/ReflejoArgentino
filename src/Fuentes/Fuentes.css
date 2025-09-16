@@ -1,0 +1,14 @@
+
+@font-face {
+  font-family: 'TT Fors';
+  src: url('./TT Fors Trial Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Aileron';
+  src: url('./Aileron-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}

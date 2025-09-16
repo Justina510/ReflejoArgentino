@@ -1,0 +1,13 @@
+.linea-comparativa-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "TT Fors", sans-serif;
+  color: var(--Letras, #393636);
+}
+
+.linea-comparativa-container h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
