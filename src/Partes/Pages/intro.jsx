@@ -4,7 +4,7 @@ import './intro.css';
 export default function Intro() {
   return (
     <section className="intro">
-      <p className="autor">Justina Quiroga Baquela</p>
+      <p className="autor">Exploración interactiva</p>
 
       <header className="intro-titulos">
         <h1>MERCADO LABORAL E INFLACIÓN</h1>
