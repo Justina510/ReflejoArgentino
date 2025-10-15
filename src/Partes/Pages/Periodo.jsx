@@ -18,7 +18,6 @@ export default function Periodo() {
     if (value > yearStart) setYearEnd(value);
   };
 
-  // Posiciones de las etiquetas en porcentaje
   const startLabelLeft = useMemo(() => ((yearStart - 2016) / 9) * 100, [yearStart]);
   const endLabelLeft = useMemo(() => ((yearEnd - 2016) / 9) * 100, [yearEnd]);
 

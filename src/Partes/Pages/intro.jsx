@@ -25,7 +25,7 @@ export default function Intro() {
             de datos provenientes del EPH y del IPC (INDEC), exploraremos el
             empleo y el desempleo, la formalidad o su ausencia, y cómo estos
             fenómenos se proyectan sobre la población. También nos detendremos
-            en una dimensión cada vez más visible: el impacto emocional del
+            en una dimensión que muchas veces pasa de ser desapercibido: el impacto emocional del
             trabajo en contextos de presión económica.
           </p>
           <img

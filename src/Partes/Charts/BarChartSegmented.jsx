@@ -8,6 +8,7 @@ import {
   Legend,
   Bar,
 } from "recharts";
+import "./BarChartSegmented.css";
 
 const CustomLegend = ({ payload }) => {
   if (!payload) return null;
@@ -26,18 +27,12 @@ const CustomLegend = ({ payload }) => {
     .filter(Boolean);
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginTop: "10px" }}>
+    <div className="custom-legend">
       {items.map((entry, index) => (
-        <div
-          key={index}
-          style={{ display: "flex", alignItems: "center", gap: "4px" }}
-        >
+        <div key={index} className="legend-item">
           <div
-            style={{
-              width: 14,
-              height: 14,
-              backgroundColor: entry.color,
-            }}
+            className="legend-color"
+            style={{ backgroundColor: entry.color }}
           />
           <span>{entry.value}</span>
         </div>
@@ -93,11 +88,11 @@ export default function BarChartSegmented({ data }) {
   });
 
   return (
-    <div style={{ width: "100%", height: 450 }}>
-      <h3 style={{ textAlign: "center", marginBottom: "10px" }}>
+    <div className="bar-chart-wrapper">
+      <h3 className="bar-chart-title">
         Situación Ocupacional por edad y género
       </h3>
-      <ResponsiveContainer>
+      <ResponsiveContainer width="100%" height={450}>
         <BarChart
           data={chartData}
           layout="vertical"

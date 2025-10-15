@@ -1,14 +1,31 @@
 .grafico-torta-container {
-  background-color: white;
+  background-color: var(--blanco);
   border: 2px solid var(--Azul);
   border-radius: 8px;
-  padding: 0px;
+  padding: 2%;
   text-align: center;
-  width: 100%; 
-  max-width:450px;
-  margin-left: 5%;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
 }
-.grafico-torta h3 {
-  font-size: 20px;
+
+.grafico-torta-container h3 {
+  font-size: clamp(14px, 1.2vw, 20px);
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .grafico-torta-container {
+    max-width: 100%;
+    padding: 8px;
+  }
+  .grafico-torta-container h3 {
+    font-size: clamp(12px, 2.5vw, 18px);
+  }
+}
+
+@media (max-width: 480px) {
+  .grafico-torta-container h3 {
+    font-size: clamp(12px, 3vw, 16px);
+  }
 }

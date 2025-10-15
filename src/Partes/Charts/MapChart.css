@@ -1,0 +1,26 @@
+.mapa-leaflet {
+  width: 90%;
+  border: 2px solid var(--Azul);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-height: 85vh;
+  margin-top: -8%;
+}
+
+@media (max-width: 1200px) {
+  .mapa-leaflet {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mapa-leaflet {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mapa-leaflet {
+    min-height: 300px;
+  }
+}

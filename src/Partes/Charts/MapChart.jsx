@@ -1,6 +1,7 @@
 import { MapContainer, TileLayer, CircleMarker, Tooltip } from 'react-leaflet';
 import provinciasCoords from '../../data/provinciasCoords.js';
 import 'leaflet/dist/leaflet.css';
+import './MapChart.css';
 
 function MapChart({ puntos }) {
   const hasData = Array.isArray(puntos) && puntos.length > 0;

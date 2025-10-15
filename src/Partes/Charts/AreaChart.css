@@ -1,0 +1,22 @@
+.area-chart-wrapper {
+  width: 100%;
+  padding:5px;
+  box-sizing: border-box;
+  font-family: 'Aileron', sans-serif;
+}
+
+.area-chart-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: var(--Letras);
+}
+
+@media (max-width: 768px) {
+  .area-chart-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    padding: 0 10px;
+  }
+}

@@ -8,7 +8,6 @@ export default function Year() {
   const [año, setAño] = useState(2016);
   const [csvRows, setCsvRows] = useState([]);
 
-  // Carga del CSV una sola vez
   useEffect(() => {
     fetch("/BasesLimpias/eph_full.csv")
       .then((res) => res.text())
@@ -30,7 +29,6 @@ export default function Year() {
       });
   }, []);
 
-  // Genera datos del treemap memoizados para mejorar rendimiento
   const treemapData = useMemo(() => {
     if (!csvRows.length) return [];
 
@@ -72,7 +70,6 @@ export default function Year() {
     }));
   }, [csvRows, año]);
 
-  // Filtra datos para gráficos (Area y Bar) memoizados para no recalcular en cada render
   const csvRowsFiltrados = useMemo(() => {
     return csvRows.filter((d) => Number(d.year) === año);
   }, [csvRows, año]);

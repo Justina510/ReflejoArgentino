@@ -1,4 +1,5 @@
 import { Treemap, ResponsiveContainer, Tooltip } from "recharts";
+import "./Treemap.css";
 
 const AGE_COLORS = {
   "18-29": "var(--amarillo)",
@@ -28,7 +29,7 @@ const CustomizedContent = ({ x, y, width, height, depth, name }) => {
         height={height}
         style={{
           fill,
-          stroke: isParent ? "#ffffff" : "#fff",
+          stroke: "#fff",
           strokeWidth: isParent ? 2 : 1,
         }}
       />
@@ -36,7 +37,7 @@ const CustomizedContent = ({ x, y, width, height, depth, name }) => {
       {isParent && width > 50 && height > 30 && (
         <text
           x={x + 5}
-          y={y + 15}
+          y={y + 20}
           fill="#000"
           fontSize={14}
           fontWeight="bold"
@@ -63,9 +64,9 @@ const CustomizedContent = ({ x, y, width, height, depth, name }) => {
 
 export default function TreemapRecharts({ data, title }) {
   return (
-    <div style={{ width: "100%", height: 400 }}>
-      <h3 style={{ textAlign: "center", marginBottom: "10px" }}>{title}</h3>
-      <ResponsiveContainer>
+    <div className="treemap-container">
+      <h3 className="treemap-title">{title}</h3>
+      <ResponsiveContainer width="100%" height={400}>
         <Treemap
           data={data}
           dataKey="size"

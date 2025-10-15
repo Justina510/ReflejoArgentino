@@ -1,14 +1,5 @@
 @import url('./src/Fuentes/Fuentes.css');
 
-html, body, #root {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  background: var(--fondo);
-  scroll-behavior: smooth;
-}
-
 :root {
   --Letras: #393636;
   --fondo: #fff8ed;
@@ -23,11 +14,24 @@ html, body, #root {
   --naranja: #ff8d66;
 }
 
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--fondo);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: hidden; 
+}
+
 .App {
   height: 100vh;
   width: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .fullpage-section {
@@ -35,7 +39,30 @@ html, body, #root {
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;    
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .App {
+    scroll-snap-type: none;
+  }
+
+  .fullpage-section {
+    scroll-snap-align: none;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: visible;
+    padding: 15px;
+  }
 }

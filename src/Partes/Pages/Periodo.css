@@ -1,39 +1,43 @@
 .periodo-page {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background: var(--fondo);
   font-family: 'Aileron', sans-serif;
-  padding: 40px;
+  padding: clamp(15px, 2vw, 25px);
   box-sizing: border-box;
 }
 
 .periodo-title {
   font-family: 'TT Fors';
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 3vw, 3.2rem);
   color: var(--Azul);
   text-align: left;
-  margin-bottom: 40px;
-  margin-left: 15%;
-  margin-top: 40px;
+  margin-left: 18%;
+  margin-bottom: clamp(20px, 2vw, 30px);
+  margin-top: clamp(10px, 1.5vw, 20px);
 }
 
 .periodo-layout {
   display: flex;
-  gap: 40px;
+  gap: clamp(20px, 3vw, 40px);
+  flex-wrap: wrap;
 }
 
 .periodo-left, .periodo-right {
-  flex: 1;
+  flex: 1 1 45%;
+  min-width: 300px;
 }
-.periodo-left{
-    margin-left: 1%;
+
+.periodo-left {
+  margin-left: 1%;
 }
 
 .periodo-slider-container {
   position: relative;
-  width: 74%;
-  height: 50px; 
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  height: 50px;
+  margin-bottom: 25px;
 }
 
 .slider-line {
@@ -81,33 +85,89 @@
   top: -30px;
   transform: translateX(-50%);
   font-family: 'Spectral';
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: var(--Letras);
   z-index: 2;
 }
 
 .texto-iz, .texto-der {
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1.2vw, 1rem);
   line-height: 1.3;
   color: var(--Letras);
   text-align: justify;
 }
 
-.texto-iz{
-    margin-right: 22%;
-}
-.texto-der{
-    margin-left: -21.4%;
-    margin-top: -5%;
-    margin-right: 5.5%;
-    line-height: 19px;
+.texto-iz {
+  margin-bottom: 15px;
 }
 
-
-.slider-periodo.start::-webkit-slider-thumb {
-  margin-top: 25px; 
+.texto-der {
+  margin-bottom: 25px;
+  margin-top: -3%;
 }
 
-.slider-periodo.end::-webkit-slider-thumb {
-  margin-top: -15px; 
+.slider-periodo.start::-webkit-slider-thumb { margin-top: 25px; }
+.slider-periodo.end::-webkit-slider-thumb { margin-top: -15px; }
+
+.periodo-charts {
+  margin-top: -5%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .periodo-layout {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .periodo-left, .periodo-right {
+    flex: 1 1 100%;
+    margin: 0;
+  }
+
+  .periodo-title {
+    font-size: 2.2rem;
+    margin-left: 5%;
+  }
+
+  .texto-iz, .texto-der {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .periodo-slider-container {
+    max-width: 100%;
+  }
+
+  .year-label {
+    font-size: 1rem;
+  }
+
+  .periodo-charts {
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .periodo-left, .periodo-right {
+    flex: 1 1 100%;
+  }
+
+  .periodo-slider-container {
+    max-width: 90%;
+  }
+
+  .periodo-charts {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1920px) {
+  .periodo-title {
+    font-size: 3.8rem;
+  }
 }

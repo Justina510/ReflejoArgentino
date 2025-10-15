@@ -38,20 +38,19 @@
 }
 
 .slider-bg {
-  background: var(--celeste);      
-  border-radius: 30px;             
-  padding: 15px 0;                 
+  background: var(--celeste);
+  border-radius: 30px;
+  padding: 15px 0;
   display: flex;
   align-items: center;
-
 }
 
 .slider-bg input[type="range"] {
--webkit-appearance: none;
-  width: 100%;                    
-  background: var(--blanco);       
-  height: 12px;                   
-  border-radius: 2px;              
+  -webkit-appearance: none;
+  width: 100%;
+  background: var(--blanco);
+  height: 12px;
+  border-radius: 2px;
   outline: none;
 }
 
@@ -61,7 +60,6 @@
   width: 24px;
   border-radius: 50%;
   background: var(--amarillo);
-
   cursor: pointer;
 }
 
@@ -74,9 +72,8 @@
 }
 
 .texto-left {
-  font-family: 'Aileron', sans-serif;
   font-size: 1rem;
-  line-height: 1;
+  line-height: 1.4;
   color: var(--Letras);
   text-align: justify;
   margin-top: -3%;
@@ -87,52 +84,22 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top:6%;
+  margin-top: 6%;
   margin-right: 3%;
 }
 
-.texto-right {
-  font-family: 'Aileron', sans-serif;
-  font-size: 1rem;
-  line-height: 1.09;
-  color: var(--Letras);
-  text-align: justify;
-}
-
-.area-chart-container {
-  height: 200px;      
-  width: 50%;         
-  margin-top: 100px;    
-}
-
-.charts-row {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.bar-chart-container {
-  margin-top: 21px;
-  flex: 1;
-  min-width: 450px;
-  height: 450px;
-}
-
-
 .texto-right-burnout {
   width: 100%;
-  font-family: 'Aileron', sans-serif;
   font-size: 0.9rem;
-  line-height: 1.1;
+  line-height: 1.4;
   color: var(--Letras);
   text-align: justify;
-
 }
 
 .texto-imagen-container {
   display: flex;
-  align-items: flex-start; 
-  gap: 5px; 
+  align-items: flex-start;
+  gap: 5px;
 }
 
 .texto-burnout {
@@ -141,7 +108,7 @@
 
 .imagen-burnout img {
   margin-top: 10px;
-  width: 150px; 
+  width: 150px;
   height: auto;
 }
 
@@ -164,65 +131,117 @@ ul.burnout-list li::before {
   transform: translateY(-50%);
   width: 12px;
   height: 12px;
-  background-color: #2273f3; 
+  background-color: #2273f3;
   border-radius: 50%;
-}
-
-ul.burnout-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul.burnout-list li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 10px;
 }
 
 ul.burnout-list li:nth-child(1)::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 12px;
-  height: 12px;
   background-color: var(--celeste);
-  border-radius: 50%;
 }
-
 ul.burnout-list li:nth-child(2)::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 12px;
-  height: 12px;
-  background-color: var(--amarillo); 
-  border-radius: 50%;
+  background-color: var(--amarillo);
+}
+ul.burnout-list li:nth-child(3)::before {
+  background-color: var(--Azul);
 }
 
-ul.burnout-list li:nth-child(3)::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 12px;
-  height: 12px;
-  background-color: var(--Azul); 
-  border-radius: 50%;
+.charts-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
+
+.area-chart-container {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  flex: 1;
+}
+
+.bar-chart-container {
+  flex: 1;
+  min-width: 450px;
+  height: auto;
+}
+
 .periodo-charts {
   display: flex;
-  gap: 20px;   
+  gap: 20px;
   justify-content: space-between;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .periodo-charts > div {
   flex: 1;
-  min-width: 300px; 
-  height: 450px; 
+  min-width: 300px;
+  height: 450px;
+}
+
+@media (max-width: 1024px) {
+  .year-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .year-left,
+  .year-right {
+    margin: 0;
+    width: 100%;
+  }
+
+  .slider-container label,
+  .slider-container .anio {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .slider-bg {
+    padding: 10px;
+  }
+
+  .texto-left,
+  .texto-right-burnout {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    padding: 0 10px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .charts-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bar-chart-container {
+    min-width: 100%;
+    height: auto;
+  }
+
+  .periodo-charts {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .periodo-charts > div {
+    width: 100%;
+    height: auto;
+  }
+
+  .texto-imagen-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imagen-burnout img {
+    width: 120px;
+    margin-top: 20px;
+  }
+
+  ul.burnout-list li {
+    font-size: 0.95rem;
+  }
 }

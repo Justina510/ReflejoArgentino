@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import Papa from 'papaparse';
+
 import Intro from './Partes/Pages/intro';
 import MapaEmpleo from './Partes/Pages/MapaEmpleo';
 import Year from './Partes/Pages/Year';
